@@ -13,18 +13,22 @@ var config = {
 
 console.log(process.env.CE_DATA)
 
+const evento = {}
+
+evento = process.env.CE_DATA
+
 // APIKEY=VamGabdPmuB_7FNxecCb1yvARlwCVXD7Su_ft67N0rEP
 // ICOS(public)=s3.us-south.cloud-object-storage.appdomain.cloud
 
 const eventInfo = {
-    object: process.env.CE_DATA.key,
-    bucket: process.env.CE_DATA.bucket
+    object: evento.key,
+    bucket: evento.bucket
 }
 
 var params = {
     Bucket: eventInfo.bucket, 
     Key: eventInfo.object
-   };
+};
 
 console.log(params)   
 
