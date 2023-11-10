@@ -11,7 +11,7 @@ var config = {
 
 // var cos = new ibm.S3(config);
 
-console.log(process.env.CE_DATA.bucket)
+console.log(JSON.parse(process.env.CE_DATA))
 
 console.log(process.env.CE_DATA.notification)
 
