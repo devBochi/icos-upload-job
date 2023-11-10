@@ -8,4 +8,5 @@ WORKDIR /usr/scr/app
 COPY . .
 
 # Comando para correr el programa
+CMD [ "npm", "install"]
 CMD [ "node", "icos-demo-job.js" ] 
