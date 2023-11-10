@@ -11,13 +11,13 @@ var config = {
 
 // var cos = new ibm.S3(config);
 
-// console.log(process.env.CE_DATA)
+console.log(process.env.CE_DATA)
 
 // APIKEY=VamGabdPmuB_7FNxecCb1yvARlwCVXD7Su_ft67N0rEP
 // ICOS(public)=s3.us-south.cloud-object-storage.appdomain.cloud
 
 const eventInfo = {
-    object: process.env.CE_DATA.notification.object_name ,
+    object: process.env.CE_DATA.key,
     bucket: process.env.CE_DATA.bucket
 }
 
@@ -27,6 +27,7 @@ var params = {
    };
 
 console.log(params)   
+
 /*
 cos.getObject(params, function(err, data) {
      if (err) console.log(err, err.stack); // an error occurred
