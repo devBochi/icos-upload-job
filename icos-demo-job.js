@@ -1,5 +1,5 @@
-var ibm = require('ibm-cos-sdk');
-var util = require('util');
+// var ibm = require('ibm-cos-sdk');
+// var util = require('util');
 
 /*
 var config = {
