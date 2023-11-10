@@ -11,18 +11,20 @@ var config = {
 
 // var cos = new ibm.S3(config);
 
-console.log(process.env.CE_DATA)
+console.log(process.env.CE_DATA.bucket)
 
-const evento = {}
+console.log(process.env.CE_DATA.notification)
 
-evento = process.env.CE_DATA
+let event = {}
+
+event = process.env.CE_DATA
 
 // APIKEY=VamGabdPmuB_7FNxecCb1yvARlwCVXD7Su_ft67N0rEP
 // ICOS(public)=s3.us-south.cloud-object-storage.appdomain.cloud
 
 const eventInfo = {
-    object: evento.key,
-    bucket: evento.bucket
+    object: event.key,
+    bucket: event.bucket
 }
 
 var params = {
