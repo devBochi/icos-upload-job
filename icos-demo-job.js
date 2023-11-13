@@ -18,7 +18,7 @@ let params = {
 
 console.log(params)   
 
-// With the info of the event, we can read the object and do whatever we want
+// With the info of the event, we can get the object and do whatever we want
 cos.getObject(params, function(err, data) {
      if (err) console.log(err, err.stack); // an error occurred
      else     console.log(data);           // successful response
