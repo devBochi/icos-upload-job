@@ -19,12 +19,12 @@ You can scale batch jobs by defining multiple instances. Workloads can be split 
 
 When you create a job, you can specify the workload configuration information that is used each time that the job is run.
 
-Typical batch job workloads include,
+Typical batch job workloads include:
 
-    machine model training
-    analyzing files, such as voice analysis or image recognition
-    compressing or decompressing files
-    archiving information
+- Machine model training
+- Analyzing files, such as voice analysis or image recognition
+- Compressing or decompressing files
+- Archiving information
 
 When you create a job, you can specify workload configuration information that is used each time that the job is run.
 
