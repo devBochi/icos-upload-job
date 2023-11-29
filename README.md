@@ -7,6 +7,7 @@
   - [1. About Code Engine jobs](#1-about-code-engine-jobs)
   - [2. About IBM Cloud Object Storage SDK (S3)](#2-about-ibm-cloud-object-storage-sdk-s3)
   - [3. About this example](#3-about-this-example)
+    - [3.1 Using this code in your environment](#31-using-this-code-in-your-environment)
   - [Sources](#sources)
 
 ## 1. About Code Engine jobs
@@ -45,6 +46,14 @@ You will need this data in order to use the ICOS sdk:
 - serviceInstanceId: this value is in your HMAC Credentials of the Service Credentials of your instance, [info](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials)
 
 For security reasons, you can pass this information as environment variables of your job, in order to not show them in the code explicitly. The other environment variable showed in the code is [CE_DATA](https://cloud.ibm.com/docs/codeengine?topic=codeengine-eventing-cosevent-producer#subcos-envvar-cedata), which contains all the information of the ICOS event that triggers the job, you can use this information in order to make requests with the ICOS sdk, such as get the object, update it, copy to another bucket, etc.
+
+### 3.1 Using this code in your environment
+
+Once we have a Code Engine project ready, we can create a Job from this repository, and then add an event subscription in order to trigger this job every time we upload a file in the bucket that we choose.
+
+- Create the job with the environment variables: [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-job-plan)
+- Set up the ICOS instance and bucket you prefer: [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-eventing-cosevent-producer)
+- Create event subscription for the job: [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-eventing-cosevent-producer#obstorage_ev_job)
 
 ## Sources
 
