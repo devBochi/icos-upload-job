@@ -41,9 +41,9 @@ This little code in Node.Js syntax is intended to give a hint of how the jobs ca
 
 You will need this data in order to use the ICOS sdk:
 
-- endpoint: the endpoint of your ICOS instance, [info](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints)
-- apiKeyId: your API Key (need some permisions in IAM), [info](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) 
-- serviceInstanceId: this value is in your HMAC Credentials of the Service Credentials of your instance, [info](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials)
+- `endpoint`: the endpoint of your ICOS instance, [info](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints)
+- `apiKeyId`: your API Key (need some permisions in IAM), [info](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) 
+- `serviceInstanceId`: this value is in your HMAC Credentials of the Service Credentials of your instance, [info](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials)
 
 For security reasons, you can pass this information as environment variables of your job, in order to not show them in the code explicitly. The other environment variable showed in the code is [CE_DATA](https://cloud.ibm.com/docs/codeengine?topic=codeengine-eventing-cosevent-producer#subcos-envvar-cedata), which contains all the information of the ICOS event that triggers the job, you can use this information in order to make requests with the ICOS sdk, such as get the object, update it, copy to another bucket, etc.
 
